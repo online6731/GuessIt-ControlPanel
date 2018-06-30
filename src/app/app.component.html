@@ -1,0 +1,48 @@
+<div class="div" style="background: #33b433;border: 1px solid green; height: 100vh; ">
+		
+		<nav mat-tab-nav-bar style="" >
+		  <a mat-tab-link 
+		     *ngFor="let link of navLinks"
+		     [routerLink]="link.path"
+		     routerLinkActive #rla="routerLinkActive"
+		     [active]="rla.isActive"
+		     style="width: 100%;">
+		    {{link.label}}
+		  </a>
+		</nav>
+
+
+		<mat-drawer-container class="example-container" hasBackdrop="false" style="height: 90vh; ">
+		  <mat-drawer #drawer mode="side">
+		  	<div>
+		  		11111
+		  		<br>
+		  		<br>
+		  		<br>
+		  		22222
+		  		<br>
+		  		<br>
+		  		<br>
+		  		33333
+		  		<br>
+		  		<br>
+		  		<br>
+		  		44444
+		  		<br>
+		  		<br>
+		  		<br>
+		  		55555
+				</div>
+
+		  </mat-drawer>
+		  <mat-drawer-content>
+
+		    <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+		  </mat-drawer-content>
+		</mat-drawer-container>
+
+
+
+	</div>
+
+<router-outlet></router-outlet>
